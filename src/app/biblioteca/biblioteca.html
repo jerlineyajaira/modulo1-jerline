@@ -1,0 +1,15 @@
+<div class="container mt-4">
+  <h2 class="text-primary">{{ titulo }}</h2>
+
+  <div class="card p-3 mt-3 shadow-sm">
+    <label for="nuevoLibro" class="form-label fw-bold">Agregar nuevo libro:</label>
+    <input #nuevoLibro id="nuevoLibro" class="form-control" placeholder="Escribe el nombre del libro">
+    <button class="btn btn-success mt-2" (click)="agregarLibro(nuevoLibro.value)">Agregar</button>
+  </div>
+
+  <ul class="list-group mt-4">
+    <li class="list-group-item" *ngFor="let libro of libros">
+      📚 {{ libro }}
+    </li>
+  </ul>
+</div>
